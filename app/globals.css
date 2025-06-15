@@ -1,12 +1,13 @@
 :root {
-  --background: #ffffff;
+  --color-m: #1F395F;
+  --color-amarillo: #E4F66F;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-amarillo);
+    --foreground: var(--color-m);
   }
 }
 
@@ -16,9 +17,11 @@ body {
   overflow-x: hidden;
 }
 
+
+
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-amarillo);
+  background: var(--color-m);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

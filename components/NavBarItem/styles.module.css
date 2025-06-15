@@ -1,0 +1,21 @@
+.item {
+  margin: 10px 0 10px 0;
+  list-style: none;
+  font-family: var(--font-title);
+  font-size: 20px;
+
+  &[data-enabled='true'] a {
+    font-weight: bold;
+    border-bottom: 1px dotted var(--color-text);
+  }
+
+  & a {
+    display: block;
+    color: var(--color-text);
+    padding-bottom: 5px;
+
+    @media (min-width: 800px) {
+      display: inline;
+    }
+  }
+}
