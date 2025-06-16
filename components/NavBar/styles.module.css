@@ -1,9 +1,24 @@
+.container{
+  margin: 30px auto;
+  position: relative;
+  background-color: var(--color-box-background);
+  width: 960px;
+
+   &::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    display: inline-block;
+    left: -100vw;
+    width: 100vw;
+  } 
+
+}
+
 .navBar {
   display: none;
-
-  background-color: var(--color-box-background);
-  margin: 0 20px;
-  padding: 20px;
+  position: relative;
 
   &[data-mobile-open='true'] {
     display: flex;
@@ -25,9 +40,13 @@
 }
 
 .logo{
-  height: 80px;
+  padding: 40px 40px 40px 200px;
+  height: 150px;
   width: auto;
   background-color: white;
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+ 
+
 }
 
 .hamburguesa {

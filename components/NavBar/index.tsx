@@ -10,15 +10,17 @@ import Image from 'next/image';
 export default function NavBar({children} : PropsWithChildren){
     const [menuOpen, setMenuOpen] = useState(false);
     return(
-        <>
-           
-            <button className={classes.hamburguesa} onClick={()=> setMenuOpen(!menuOpen)}>
+        <div className={classes.container}>
+            <button 
+            className={classes.hamburguesa} 
+            onClick={()=> setMenuOpen(!menuOpen)}
+            >
                 {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
             </button>
-            <nav data-movile-open={menuOpen} className={classes.navBar}>
+            <nav data-mobile-open={menuOpen} className={classes.navBar}>
                  <Image className={classes.logo} src={Logo} alt=""/>
                 { children } 
             </nav>
-        </>
+        </div>
     );
 }

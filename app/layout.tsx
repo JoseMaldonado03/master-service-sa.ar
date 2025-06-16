@@ -29,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Container/>
           <NavBar>
             <NavBarItem href="/"> Inicio </NavBarItem>
             <NavBarItem href="services"> Servicios </NavBarItem>
