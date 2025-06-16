@@ -1,26 +1,39 @@
-.container{
+.container {
   margin: 30px auto;
   position: relative;
   background-color: var(--color-box-background);
   width: 960px;
+  display: flex;
 
-   &::after{
+  &::after {
+    @media (min-width: 800px) {
+      content: "";
+      background-color: white;
+      position: absolute;
+      height: 100%;
+      display: inline-block;
+      left: -100vw;
+      width: 100vw;
+      top: -15px;
+      border: 15px solid white;
+    }
+  }
+
+  &::before {
     content: "";
-    background-color: white;
+    background-color: var(--color-box-background);
     position: absolute;
     height: 100%;
     display: inline-block;
-    left: -100vw;
+    right: -100vw;
     width: 100vw;
-  } 
-
+  }
 }
 
 .navBar {
   display: none;
-  position: relative;
 
-  &[data-mobile-open='true'] {
+  &[data-mobile-open="true"] {
     display: flex;
     flex-direction: column;
   }
@@ -29,24 +42,23 @@
     background-color: transparent;
     flex-direction: row;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 120px;
+    width: 100%;
 
-    &[data-mobile-open='true'] {
+    &[data-mobile-open="true"] {
       flex-direction: row;
     }
   }
 }
 
-.logo{
-  padding: 40px 40px 40px 200px;
-  height: 150px;
+.logo {
   width: auto;
+  padding: 20px 60px 20px 20px;
   background-color: white;
+  height: 150px;
   clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
- 
-
 }
 
 .hamburguesa {
