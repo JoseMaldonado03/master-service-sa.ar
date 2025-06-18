@@ -1,7 +1,7 @@
 :root {
-  --color-m: #1F395F;
-  --color-amarillo: #E4F66F;
-  --color-box-background: #14253F;
+  --color-m: #1f395f;
+  --color-amarillo: #e4f66f;
+  --color-box-background: #14253f;
   --color-code-background: #ddcda7;
 
   --foreground: #171717;
@@ -19,8 +19,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-
-
 
 body {
   color: var(--color-amarillo);

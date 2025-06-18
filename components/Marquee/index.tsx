@@ -1,4 +1,4 @@
-import classes from './styles.module.css';
+import classes from './styles.module.css'
 
 export default function Marquee() {
   return (
@@ -7,5 +7,5 @@ export default function Marquee() {
         ¡Bienvenido a Master Service! Control de plagas profesional 🐜
       </p>
     </div>
-  );
+  )
 }

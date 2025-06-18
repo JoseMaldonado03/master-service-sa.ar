@@ -1,13 +1,22 @@
 .container {
   margin: 30px auto;
   position: relative;
-  background-color: var(--color-box-background);
   width: 960px;
   display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  
+  > img {
+    display: block;
+
+    @media (min-width: 800px){
+      display: none;
+    }}
+
 
   &::after {
     @media (min-width: 800px) {
-      content: "";
+      content: '';
       background-color: white;
       position: absolute;
       height: 100%;
@@ -20,7 +29,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     background-color: var(--color-box-background);
     position: absolute;
     height: 100%;
@@ -28,12 +37,24 @@
     right: -100vw;
     width: 100vw;
   }
+
+  @media (min-width: 800px){
+    background-color: var(--color-box-background);
+    
+  }
 }
 
 .navBar {
   display: none;
+   img{
+    display: none;
 
-  &[data-mobile-open="true"] {
+    @media (min-width: 800px){
+      display: block;
+    }
+  }
+
+  &[data-mobile-open='true'] {
     display: flex;
     flex-direction: column;
   }
@@ -47,31 +68,34 @@
     height: 120px;
     width: 100%;
 
-    &[data-mobile-open="true"] {
+    &[data-mobile-open='true'] {
       flex-direction: row;
     }
   }
 }
 
 .logo {
-  height: 0px;
-  width: 0px;
-  @media (min-width: 800px){
-  width: auto;
-  padding: 20px 60px 20px 20px;
-  background-color: white;
-  height: 150px;
-  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    width: 150px;
+    height: auto;
+    background-color: white;
+  @media (min-width: 800px) {
+    width: auto;
+    padding: 20px 60px 20px 20px;
+    background-color: white;
+    height: 150px;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
   }
-
 }
 
 .hamburguesa {
+  display: flex;
+  justify-content: flex-start;
   background-color: transparent;
   border: 0;
   font-size: 32px;
   padding: 16px;
   cursor: pointer;
+  color: black;
 
   @media (min-width: 800px) {
     display: none;

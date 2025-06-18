@@ -10,11 +10,12 @@
 
   & a {
     display: block;
-    color: var(--color-text);
+    color: black;
     padding-bottom: 5px;
 
     @media (min-width: 800px) {
       display: inline;
+      color: var(--color-text)
     }
   }
 }

@@ -1,6 +1,3 @@
-export default function Users(){
-    return(
-        <>
-        </>
-    )
+export default function Users() {
+  return <></>
 }

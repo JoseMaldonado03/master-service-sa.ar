@@ -4,7 +4,7 @@
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  background-color:var(--color-box-background);
+  background-color: var(--color-box-background);
   padding: 10px 0;
 }
 
