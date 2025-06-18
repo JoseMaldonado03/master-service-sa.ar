@@ -1,17 +1,23 @@
 import { type PropsWithChildren } from "react";
 import { type Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import { Anton } from 'next/font/google';
 
 import "./globals.css";
 
-import Container from "@/components/container";
+
 import NavBar from "@/components/NavBar";
 import NavBarItem from "@/components/NavBarItem";
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const anton = Anton({
+  variable: "--font-title",
+  subsets: ['latin'],
+  weight: ['400',],
 });
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,15 +33,19 @@ export default function RootLayout({
   children,
 }: PropsWithChildren) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="es" suppressHydrationWarning>
+      <body className={`${anton.variable} ${geistMono.variable}`}>
+        <Marquee />
+        <Container>
           <NavBar>
-            <NavBarItem href="/"> Inicio </NavBarItem>
-            <NavBarItem href="services"> Servicios </NavBarItem>
-            <NavBarItem href="tips"> Tips </NavBarItem>
-            <NavBarItem href="users"> Usuarios </NavBarItem>
-          </NavBar>
-          {children}
+              <NavBarItem href="/"> Inicio </NavBarItem>
+              <NavBarItem href="services"> Servicios </NavBarItem>
+              <NavBarItem href="tips"> Tips </NavBarItem>
+              <NavBarItem href="users"> Usuarios </NavBarItem>
+            </NavBar>
+            {children}
+            <Footer/>
+          </Container>
       </body>
     </html>
   );

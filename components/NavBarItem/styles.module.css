@@ -1,7 +1,6 @@
 .item {
   margin: 10px 0 10px 0;
   list-style: none;
-  font-family: var(--font-title);
   font-size: 20px;
 
   &[data-enabled='true'] a {

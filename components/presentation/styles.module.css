@@ -1,18 +1,31 @@
 .container {
-  margin: 0 0 70px;
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
-.title {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 52px;
-  font-weight: 300;
-  color: #fff;
-  margin: 30px 0;
+
+.fumigador{
+   height: 200px;
+   width: auto;
+   margin-left: 50px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 
-.subtitle {
-  color: #fff;
-  text-align: center;
-  font-size: 23px;
+.title{
+  color: white;
+  font-family: var(--font-title);
+  font-size: 90px;
+  line-height: 1.1;
+
+}
+.subtitle{
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
 }
