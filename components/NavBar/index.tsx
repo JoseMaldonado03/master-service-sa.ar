@@ -11,15 +11,16 @@ export default function NavBar({ children }: PropsWithChildren) {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div className={classes.container}>
-      <button
-        className={classes.hamburguesa}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        {menuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
-      </button>
-       <Image className={classes.logo} src={Logo} alt="" />
-      <nav data-mobile-open={menuOpen} className={classes.navBar}>
+      <div className={classes.logoContainer}>
+        <button
+          className={classes.hamburguesa}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+        </button>
         <Image className={classes.logo} src={Logo} alt="" />
+      </div>
+      <nav data-mobile-open={menuOpen} className={classes.navBar}>
         {children}
       </nav>
     </div>

@@ -2,17 +2,10 @@
   margin: 30px auto;
   position: relative;
   width: 960px;
-  display: flex;
-  justify-content: flex-start;
   background-color: white;
-  
-  > img {
-    display: block;
-
-    @media (min-width: 800px){
-      display: none;
-    }}
-
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
 
   &::after {
     @media (min-width: 800px) {
@@ -36,27 +29,30 @@
     display: inline-block;
     right: -100vw;
     width: 100vw;
+    top: -0px;
   }
 
-  @media (min-width: 800px){
+  @media (min-width: 800px) {
     background-color: var(--color-box-background);
-    
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
   }
+}
+
+.logoContainer {
+  display: flex;
+  width: 100%;
 }
 
 .navBar {
   display: none;
-   img{
-    display: none;
-
-    @media (min-width: 800px){
-      display: block;
-    }
-  }
+  padding-left: 20px;
 
   &[data-mobile-open='true'] {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
   }
 
   @media (min-width: 800px) {
@@ -75,15 +71,16 @@
 }
 
 .logo {
-    width: 150px;
-    height: auto;
-    background-color: white;
+  width: 150px;
+  height: auto;
+  background-color: white;
   @media (min-width: 800px) {
     width: auto;
     padding: 20px 60px 20px 20px;
     background-color: white;
-    height: 150px;
+    height: 170px;
     clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    margin: -15px 0;
   }
 }
 
